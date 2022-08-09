@@ -28,12 +28,14 @@ video {
 
 .volume {
   width: 0;
+  opacity: 0;
   background: gray;
   height: 3px;
   transition: all 0.3s ease;
 }
 
 .volume.show {
+  opacity: 1;
   width: 50px;
 }
 
