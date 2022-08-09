@@ -1,0 +1,44 @@
+video {
+  width: 100%;
+}
+
+
+.progress-bar {
+  height: 15px;
+  width: 100%;
+  background-color: gray;
+}
+
+.progress-bar-status {
+  height: 100%;
+  width: 0;
+  background-color: red;
+}
+
+.video-buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+.volume-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.volume {
+  width: 0;
+  background: gray;
+  height: 3px;
+  transition: all 0.3s ease;
+}
+
+.volume.show {
+  width: 50px;
+}
+
+.volume-status {
+  background: red;
+  width: 10%;
+  height: 100%;
+}

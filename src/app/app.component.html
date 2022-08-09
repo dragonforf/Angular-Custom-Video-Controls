@@ -1,0 +1,32 @@
+<div class="video-player">
+  <video
+    #videoPlayer
+    src="https://www.w3schools.com/html/movie.mp4"
+    (timeupdate)="handleTimeUpdate()"
+  ></video>
+  <div class="progress-bar">
+    <div class="progress-bar-status" [ngStyle]="{'width': videoProgress }"></div>
+  </div>
+  <div class="video-buttons">
+      <span
+        *ngIf="videoPlayer.paused"
+        (click)="videoPlayer.play()">
+        <i class="fa-solid fa-play"></i>
+      </span>
+      <span
+        *ngIf="!videoPlayer.paused"
+        (click)="videoPlayer.pause()">
+        <i class="fa-solid fa-pause"></i>
+      </span>
+      <span class="volume-container" (mouseover)="showVolume = true;" (mouseleave)="showVolume = false">
+        <i class="fa-solid fa-headphones"></i>
+        <div class="volume" [ngClass]="{ 'show': showVolume }">
+          <div class="volume-status">
+          </div>
+        </div>
+      </span>
+      <span (click)="openFullscreen()">
+        <i class="fa-solid fa-expand"></i>
+      </span>
+  </div>
+</div>
