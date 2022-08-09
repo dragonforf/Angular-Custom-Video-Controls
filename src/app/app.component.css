@@ -38,9 +38,3 @@ video {
   opacity: 1;
   width: 50px;
 }
-
-.volume-status {
-  background: red;
-  width: 10%;
-  height: 100%;
-}
